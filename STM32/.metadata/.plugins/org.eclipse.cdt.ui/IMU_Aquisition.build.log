@@ -1,0 +1,16 @@
+15:35:21 **** Incremental Build of configuration Debug for project IMU_Aquisition ****
+make -j12 all 
+arm-none-eabi-gcc -o "IMU_Aquisition.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\tinyMl_Workspace\TinyML\STM32\IMU_Aquisition\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IMU_Aquisition.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IMU_Aquisition.elf
+ 
+arm-none-eabi-size  IMU_Aquisition.elf 
+arm-none-eabi-objdump -h -S IMU_Aquisition.elf  > "IMU_Aquisition.list"
+   text	   data	    bss	    dec	    hex	filename
+  41828	    468	   2156	  44452	   ada4	IMU_Aquisition.elf
+Finished building: default.size.stdout
+ 
+Finished building: IMU_Aquisition.list
+ 
+
+15:35:21 Build Finished. 0 errors, 0 warnings. (took 450ms)
+
